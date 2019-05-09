@@ -1,0 +1,18 @@
+version: "3"
+services:
+  electrum:
+    image: electrum
+    volumes:
+      - "./wallets:/root/.electrum/wallets"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9999:9999"
+      - "7777:7777"
+    environment:
+      - MERCHANT_HOST=localhost
+      - RPC_ENABLED=1
+      - RPC_HOST=0.0.0.0
+      - RPC_PORT=7777
+      - WEBSOCKET_ENABLED=0
+      - WEB_SOCKET_PORT=9999
