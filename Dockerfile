@@ -43,12 +43,12 @@ RUN cd /tmp \
 
 # Cleanup
 RUN rm -Rf /tmp/*
-RUN apt-get purge -y --auto-remove \
-	build-essential python3-pip python3-setuptools \
-	build-essential libssl-dev zlib1g-dev \
-	libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-	libncurses5-dev libncursesw5-dev xz-utils tk-dev \
-	git
+#RUN apt-get purge -y --auto-remove \
+#	build-essential python3-pip python3-setuptools \
+#	build-essential libssl-dev zlib1g-dev \
+#	libbz2-dev libreadline-dev libsqlite3-dev wget llvm \
+#	libncurses5-dev libncursesw5-dev xz-utils tk-dev \
+#	git
 
 # Copy init script
 COPY init.sh /
